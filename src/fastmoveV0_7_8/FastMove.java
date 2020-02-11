@@ -1,4 +1,4 @@
-package fastmoveV0_7_5;
+package fastmoveV0_7_8;
 
 public class FastMove {
 
