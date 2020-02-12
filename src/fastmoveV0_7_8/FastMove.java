@@ -1,5 +1,7 @@
 package fastmoveV0_7_8;
 
+import java.util.Iterator;
+
 public class FastMove {
 
     /**
@@ -13,6 +15,15 @@ public class FastMove {
         job001.add(parcel01);
         job001.add(parcel02);
         System.out.println(job001);
+        
+        GenericBag<Parcel> bag=new GenericBag<>(10);
+        bag.add(parcel01);
+        bag.add(parcel02);
+        
+        Iterator<Parcel> itemIter=bag.iterator();
+        while(itemIter.hasNext()){
+            System.out.println(itemIter.next().toString());
+        }
     }
     
 }
