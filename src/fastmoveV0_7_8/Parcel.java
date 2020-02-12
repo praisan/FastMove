@@ -9,7 +9,7 @@ package fastmoveV0_7_8;
  *
  * @author Praisan
  */
-public class Parcel {
+public class Parcel implements Comparable<Parcel> {
 
     private int id;
     private double lat, longi;
@@ -52,5 +52,10 @@ public class Parcel {
         Parcel temp =new Parcel(this.id,this.lat,this.longi,this.status);
         return temp;
     }
+
+   public int compareTo(Parcel anotherParcel){
+       return this.id-anotherParcel.id;
+   }
+  
 
 }
